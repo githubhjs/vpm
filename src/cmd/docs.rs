@@ -14,7 +14,6 @@ impl Execute for Docs {
         let docs_count = decrypt_docs_count()?;
         if docs_count >= 10 {
             println!("You have used all your documentation generation credits. Consider upgrading to VPM Pro for unlimited and betterdocumentation generation.");
-            return Ok(());
         }
 
         if self.from_repo {
