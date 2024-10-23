@@ -50,7 +50,7 @@ impl Execute for Docs {
                 return Err(anyhow!("Module '{}' not found in vpm_modules. Please provide a URL to a repository containing the module, or ensure the module exists in the correct location.", self.module_path));
             }
         }
-        encrypt_docs_count(docs_count + 1)?;
+        encrypt_docs_count(docs_count)?;
         println!("Documentation generated successfully. You have used {} of your 10 credits.", docs_count + 1);
         Ok(())
     }
